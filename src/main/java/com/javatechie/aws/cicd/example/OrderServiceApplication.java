@@ -21,6 +21,8 @@ public class OrderServiceApplication {
 
     @GetMapping
     public List<Order> fetchOrders() {
+    	System.out.println("in fetchOrders ::5555::");
+    	System.out.println("in fetchOrders :::5555:");
         return orderDao.getOrders().stream().
                 sorted(Comparator.comparing(Order::getPrice)).collect(Collectors.toList());
     }
